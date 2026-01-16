@@ -21,13 +21,13 @@ public partial class UInputActionWidget : UUserWidget
     [UProperty, BindWidget]
     public partial UTextBlock RightActionText { get; set; }
     
-    [UProperty(PropertyFlags.EditAnywhere, Category = "Input Defaults")]
+    [UProperty(PropertyFlags.EditAnywhere), Category("Input Defaults")]
     public partial UInputAction? DefaultInputAction { get; set; }
     
-    [UProperty(PropertyFlags.EditAnywhere, Category = "Input Defaults")]
+    [UProperty(PropertyFlags.EditAnywhere), Category("Input Defaults")]
     public partial FText DefaultActionText { get; set; }
     
-    [UProperty(PropertyFlags.EditAnywhere, Category = "Input Defaults")]
+    [UProperty(PropertyFlags.EditAnywhere), Category("Input Defaults")]
     public partial EInputActionDescriptionLocation DefaultDescriptionLocation { get; set; }
     
     [UProperty(PropertyFlags.Transient), BindWidgetAnim]

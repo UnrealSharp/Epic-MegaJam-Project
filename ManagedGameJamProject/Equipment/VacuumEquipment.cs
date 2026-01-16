@@ -39,7 +39,7 @@ public partial class UVacuumEquipment : UEquipment
     {
         FVector start = Owner!.ActorLocation;
         List<AActor> ignoredActors = new List<AActor> { Owner! };
-        if (!SystemLibrary.MultiSphereTraceByChannel(start, start, VacuumRange, ETraceChannel.Visibility.ToQuery(),
+        if (!SystemLibrary.MultiSphereTraceByChannel(start, start, VacuumRange, ETraceChannel.Visibility.ToTraceQuery(),
                 false,
                 ignoredActors,
                 EDrawDebugTrace.None,

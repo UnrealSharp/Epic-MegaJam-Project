@@ -28,7 +28,7 @@ public partial class UAreaOfDamageTask : UBTTask_BlueprintBase
     
     public static void ApplyAreaDamage(FVector center, float radius, float damageAmount, APawn controlledPawn)
     {
-        SystemLibrary.MultiSphereTraceByChannel(center, center, radius, ETraceChannel.Visibility.ToQuery(), false, new List<AActor>() { controlledPawn }, EDrawDebugTrace.None, out IList<FHitResult> outHits, false);
+        SystemLibrary.MultiSphereTraceByChannel(center, center, radius, ETraceChannel.Visibility.ToTraceQuery(), false, new List<AActor>() { controlledPawn }, EDrawDebugTrace.None, out IList<FHitResult> outHits, false);
         
         foreach (FHitResult hit in outHits)
         {

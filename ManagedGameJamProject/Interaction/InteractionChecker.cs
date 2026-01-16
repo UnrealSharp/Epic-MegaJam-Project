@@ -50,7 +50,7 @@ public partial class UInteractionChecker : UActorComponent
     {
         FVector start = Owner.ActorLocation;
         if (!SystemLibrary.MultiSphereTraceByChannel(start, start, InteractionRadius,
-                ETraceChannel.Visibility.ToQuery(),
+                ETraceChannel.Visibility.ToTraceQuery(),
                 false,
                 _actorsToIgnore,
                 EDrawDebugTrace.None,
